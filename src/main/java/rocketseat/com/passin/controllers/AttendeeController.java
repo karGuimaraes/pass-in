@@ -19,4 +19,11 @@ public class AttendeeController {
         AttendeeBadgeResponseDTO response = this.attendeeService.getAttendeeBadge(id, uriComponentsBuilder);
         return ResponseEntity.ok(response);
     }
+
+    @PostMapping("/{id}/check-in")
+    public ResponseEntity<Void> registerCheckIn(@PathVariable String id, UriComponentsBuilder uriComponentsBuilder) {
+        this.attendeeService.checkIn(id);
+        var uri = uriComponentsBuilder.path("/attendees/{id}/badge").buildAndExpand(id).toUri();
+        return ResponseEntity.created(uri).build();
+    }
 }

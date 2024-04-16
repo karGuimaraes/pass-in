@@ -1,4 +1,4 @@
-package rocketseat.com.passin.domain.checkin;
+package rocketseat.com.passin.domain.checkIn;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +15,7 @@ import rocketseat.com.passin.domain.attendee.Attendee;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Checkin {
+public class CheckIn {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 

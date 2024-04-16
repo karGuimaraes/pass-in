@@ -1,10 +1,11 @@
 package rocketseat.com.passin.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import rocketseat.com.passin.domain.checkIn.CheckIn;
+
 import java.util.Optional;
 
-import rocketseat.com.passin.domain.checkin.Checkin;
-
-public interface CheckInRepository extends JpaRepository<Checkin, Integer>{
-    Optional<Checkin> findByAttendeeId(String attendeeId);
+public interface CheckInRepository extends JpaRepository<CheckIn, Integer>{
+    Optional<CheckIn> findByAttendeeId(String attendeeId);
 }
