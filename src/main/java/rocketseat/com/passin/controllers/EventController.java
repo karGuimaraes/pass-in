@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import rocketseat.com.passin.dto.attendee.AttendeeIdDTO;
 import rocketseat.com.passin.dto.attendee.AttendeeRequestDTO;
@@ -14,6 +15,7 @@ import rocketseat.com.passin.dto.event.EventResponseDto;
 import rocketseat.com.passin.services.AttendeeService;
 import rocketseat.com.passin.services.EventService;
 
+@Tag(name = "Events", description = "Events related endpoints")
 @RestController
 @RequestMapping("/events")
 @RequiredArgsConstructor

@@ -4,10 +4,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import rocketseat.com.passin.dto.attendee.AttendeeBadgeResponseDTO;
 import rocketseat.com.passin.services.AttendeeService;
 
+@Tag(name = "Attendees", description = "Attendees related endpoints")
 @RestController
 @RequestMapping("/attendees")
 @RequiredArgsConstructor
